@@ -27,3 +27,8 @@ Deploy it on Github pages.
 # Built With
 HTML, CSS and Javascript
 
+# How to run it locally
+Simply download the ZIP file of this repository. 
+Once the files are on your machine, open the FavGradient folder in Visual Studio Code.
+
+With the files open in Visual Studio Code, press the Go Live button at the bottom of the window to launch the files with Live Server.
