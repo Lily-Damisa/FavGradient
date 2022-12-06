@@ -11,11 +11,12 @@
 <body>        
         <div class="top-section">
             <div>
-                <h1>FavGradient</h1>
+                
+                <h1><span class="logo"></span><i>FavGradient</i></h1>
             </div>
             <div class="colors">
                 <span id="g1"></span>
-                <i class="fa-regular fa-right-long"></i>
+                <i class="far fa-solid fa-arrow-right-long"></i>
                 <span id="g2"></span> 
             </div>
             <div>
@@ -25,11 +26,111 @@
             </div>
         </div>
 
+        <!-- Lower section -->
+        <div class="second-section">
+            <div>
+                <button id="viewBtn" class="cta">
+                    <i class="fa-solid fa-bars"></i>
+                    View all gradients
+                </button>      
+            </div>
+
+            <div>
+                <button id="myBtn" class="cta">Add Gradient &nbsp;<span style="color: white;"><i class="fa-solid fa-plus-minus"></i></span></button>
+
+                <button id="myBtn2" class="cta">Copy CSS</button>    
+            </div>
+
+        </div>
+
+
         <main class="main">
+            <div class="loader-wrapper">
+                <div>
+                    <h1><i><span style="color: #db3490;">Fav</span>Gradient</i></h1>
+                    <h3>A beautiful day to <span style="border: 2px solid #DB3490; padding: 5px; border-radius: 5px;">browse</span> through some <span style="color: #db3490;">gradients</span>. <br><br>Let's have some fun!</h3> 
+                </div>
+                <div class="loader"></div>
+            </div>
+
+            <h2 class="gradient-description"></h2>
+
+            <!-- Add Gradient Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Add Gradient </h2>
+                        <h4>Select 2 colors:</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        
+                        <label for="from">Color One:</label>
+                        <input type="color" name="from" id="from" value="#780206">
+                        <div class="from-color"></div>
+
+                        <label for="to">Color Two:</label>
+                        <input type="color" name="to" id="to" value="#061161"><br><br>
+
+                        <label for="add-name">Gradient Name:</label><br>
+                        <input type="text" name="gradient-name" id="gradient-name" placeholder="e.g. Rose Of Sharon"><br><br>
+
+                        <button id="save-gradient-btn" class="cta" onclick="saveGradient()">Save Gradient</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copy CSS code Modal -->
+            <div id="CSSModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="head">
+                        <h2>Copy CSS code:</h2>
+                        <div class="tooltip">
+                            <button onclick="copyToClipboard()" onmouseout="outFunc()">
+                              <span class="tooltiptext" id="myTooltip">Copy CSS Code</span>
+                              <i class="fa-solid fa-clipboard-check"></i>
+                              </button>
+                        </div>
+                        <span class="closee">&times;</span>
+
+                    </div>
+                        <div class="codebox">
+                                <code class="code">
+                                </code>   
+                        </div>
+                </div>
+
+            </div>
+            
+
             <i class="fa fa-solid fa-chevron-left" id="pre-btn"></i>
             <i class="fa fa-solid fa-chevron-right" id="nxt-btn"></i>
         </main>
 
+        <section class="gradient-list">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="card"></div>
+            <div class="cardd"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+
+            <!-- <div class="cardd"></div> -->
+        </section>
     
     <script src="./script.js"></script>
 </body>
