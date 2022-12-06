@@ -277,10 +277,37 @@ code{
   font-size: 40px;
   color: black;
 }
-@media screen and (max-height: 450px) {
+@media screen and (min-height: 325px) {
   .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
+
+  .top-section{
+    flex-direction: column;
+    height: 109px;
+    padding: 5px;
+  }
+
+  .second-section{
+    gap: 20px;
+  }
+  .github{
+    display: none;
+  }
+  .loader-wrapper h3{
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-height: 750px) {
+  .top-section{
+    flex-direction: row;
+  }
+  .github{
+    display: block;
+  }
+
+
 }
