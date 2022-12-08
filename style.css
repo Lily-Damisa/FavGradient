@@ -60,7 +60,7 @@ main h1{
 .second-section{
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .colors{
     display: flex;
@@ -277,7 +277,7 @@ code{
   font-size: 40px;
   color: black;
 }
-@media screen and (min-height: 325px) {
+@media screen and (max-width: 375px) {
   .closebtn {
     font-size: 40px;
     top: 15px;
@@ -299,15 +299,16 @@ code{
   .loader-wrapper h3{
     font-size: 13px;
   }
+  .fa{
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.185);
+    padding: 20px 10px;
+}
+.modal-content{
+  width: 98%;
+  left: 0px;
 }
 
-@media screen and (min-height: 750px) {
-  .top-section{
-    flex-direction: row;
-  }
-  .github{
-    display: block;
-  }
-
-
 }
+
